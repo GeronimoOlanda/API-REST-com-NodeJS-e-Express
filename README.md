@@ -2,7 +2,7 @@
 
 
 
-#### Dentro de um unico controller, seguindo a regra do mercado, devemos ter no maximo 5 métodos, para uma melhor clareza e facil manutenção, algumas regras são:
+#### Dentro de um unico controller em uma API REST, seguindo a regra do mercado, devemos ter no maximo 5 métodos, para uma melhor clareza e facil manutenção, algumas regras são:
 
 * index ->  este método é onde listamos todos os usuarios - Geralmente Utiliza: GET
 * store/create -> este método é onde cria um novo usuario - Geralmente Utiliza: POST
