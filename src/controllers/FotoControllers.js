@@ -1,6 +1,6 @@
-class HomeController {
-  async index(req, res) {
-    res.json('index');
+class FotoController {
+  async store(req, res) {
+    res.json(req.file);
   }
 }
-export default new HomeController();
+export default new FotoController();
