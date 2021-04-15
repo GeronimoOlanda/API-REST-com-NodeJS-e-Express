@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import fotoController from '../controllers/FotoControllers';
+import homeController from '../controllers/HomeControllers';
 
 const router = new Router();
 
-router.post('/', fotoController.store);
+router.get('/', homeController.store);
 
 export default router;
