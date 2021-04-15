@@ -21,7 +21,11 @@ const whiteList = [
 const corsOptions = {
   // origin é setado pelo browser.
   origin(origin, callback) {
-
+    if (whiteList.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
   },
 };
 class App {
@@ -32,7 +36,7 @@ class App {
   }
 
   middlewares() {
-    this.app.use(cors());
+    this.app.use(cors(corsOptions));
     this.app.use(helmet());
 
     this.app.use(express.urlencoded({ extended: true }));
